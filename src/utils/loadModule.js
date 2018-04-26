@@ -23,6 +23,7 @@ export default function loadModule(moduleName, params) {
         moduleName: moduleName,
         instance: new Controller(nodes, params), //初始化
         queryData: params,
+        show: true,
         selector,
         nodes
       })
@@ -60,6 +61,7 @@ export default function loadModule(moduleName, params) {
         moduleName: moduleName,
         instance: new Controller(jqNodes, params), //初始化
         queryData: params,
+        show: true,
         selector,
         jqNodes
       })

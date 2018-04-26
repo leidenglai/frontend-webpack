@@ -83,17 +83,16 @@ const routeHandler = (router, key) => (...query) => {
   if (moduleInstanceStack[moduleName] === undefined) {
     moduleInstanceStack[moduleName] = {
       moduleName: moduleName,
-      show: true
+      show: false
     }
   } else {
     moduleInstanceStack[moduleName].show = true
   }
 
   _.forEach(moduleInstanceStack, (item, name) => {
-    if (moduleName === name) {
-    } else {
+    if (moduleName !== name) {
       item.show = false
-      appView.find(`.pageContainer#${moduleName}Content`).attr('style', 'display:none')
+      appView.find(`.pageContainer#${name}Content`).attr('style', 'display:none')
     }
   })
 
@@ -114,6 +113,12 @@ const routes = _.mapValues(routesMap, routeHandler)
 
 window.RouterController = new Router(routes).configure({
   html5history: true,
+  before: () => {
+    const route = RouterController.getRoute()
+
+    // 路由变化处理 处理主菜单显隐
+    window.mainMenusControl.listenRoute(route)
+  },
   notfound: () => {
     asynOnpopstate(() => {
       // 如果路由没匹配到 去到主页

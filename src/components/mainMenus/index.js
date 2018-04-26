@@ -14,9 +14,10 @@ import MainMenusTpl from 'tpl/components/mainMenus.tpl.html'
  */
 export default class MainMenus {
   constructor(options = {}) {
+    this.hideModule = ['login'] // 需要隐藏菜单的模块
+
     // 对页面加载模板等
     this.mainMenusDom = $('#mainMenus')
-
     this.mainMenusDom.append(MainMenusTpl())
 
     this.init()
@@ -25,8 +26,8 @@ export default class MainMenus {
     this.searchWindow()
 
     this.oHeight = $(window).height()
-
-    this.searchWindow = ''
+    // 控制显隐
+    this.handleShow(location.pathname)
   }
 
   init() {
@@ -51,6 +52,25 @@ export default class MainMenus {
     })
 
     $('#search_window').window('close')
+  }
+
+  handleShow(routerName) {
+    // 初始化时 检查当前模块是否在hideModule中
+    if (_.find(this.hideModule, name => ~routerName.indexOf(name))) {
+      this.mainMenusDom.hide()
+    } else {
+      this.mainMenusDom.show()
+    }
+  }
+
+  /**
+   * listenRoute 路由改变时的回调 路由变化时 会调用此方法
+   * @param  {Array} route 路由包含的数据
+   * @return undefind
+   */
+  listenRoute(route) {
+    // route[0] 模块名称 其他是相应参数
+    this.handleShow(route[0])
   }
 
   bindEvent() {
