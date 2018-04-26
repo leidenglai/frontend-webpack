@@ -200,7 +200,7 @@ export default IndexClass
 ```
 
 在 js 逻辑中跳转页面时可使用继承自`src/containers/main.js`中的 goModule 方法达到无刷新效果。
-~传统的跳转方式不受影响~
+_传统的跳转方式不受影响_
 
 ## CSS 模块
 
@@ -228,6 +228,9 @@ export default IndexClass
 ```
 
 模板加载返回一个可执行的函数到 template，可以给 template 的添加参数传入到模板中解析，参考[GitHub - emaphp/underscore-template-loader: A Underscore and Lodash template loader for Webpack](https://github.com/emaphp/underscore-template-loader)。
+
+注意：项目底层已将主模板代码解析过（解析逻辑位于`/src/utils/loadModule.js`），将 `tpl/index/index.tpl.html`直接放入到了主模板的控制器标签中，模板参数可在 url 的 query 字段传入。如 url：demo.com/index?aa=bb
+index 模板中就可以直接使用 aa 变量
 
 一般模块随便写，主容器有一定的规范
 
@@ -258,10 +261,7 @@ console.log(html)
 //  </div>
 ```
 
-再通过 jQuery 的文档操作方法将其添加到具体节点；
-
-注意：项目底层已将主模板代码解析过（解析逻辑位于`/src/utils/loadModule.js`），将 `tpl/index/index.tpl.html`直接放入到了主模板的控制器标签中，模板参数可在 url 的 query 字段传入。如 url：demo.com/index?aa=bb
-index 模板中就可以直接使用 aa 变量
+再通过 jQuery 的文档操作方法将其添加到具体节点。
 
 ## 数据请求
 
