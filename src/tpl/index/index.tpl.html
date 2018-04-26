@@ -1,0 +1,304 @@
+<div class="pageContainer" id="indexContent">
+  <!-- 主页 -->
+  <a href="/index?aa=bb" push-state>test</a>
+  <div class="index_main" id="index_main">
+    <div class="user_menu">
+      <div class="btn-group">
+        <div class="btn-group">
+          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" style="background:none;height:50px;width:50px;border-radius: 50px;"></button>
+          <ul id="" class="dropdown-menu" style="left:-60px !important;min-width:100px !important;z-index: 9999;">
+            <li>
+              <a href="##">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;切换用户</a>
+            </li>
+            <li>
+              <a href="##">
+                <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;修改密码</a>
+            </li>
+            <li>
+              <a href="##">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;用户设置</a>
+            </li>
+            <li>
+              <a href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;退出登录</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="index_tree_btns">
+      <div class="index_tree_btn tree_btn" isopen="0"></div>
+      <div class="index_tree_btn attr_btn" isopen="0"></div>
+    </div>
+    <div id="left_menu" class="easyui-window" style="width:280px;min-width: 280px;" closed="true" data-options="onClose:function(){return false}">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#home" aria-controls="home" role="tab" data-toggle="tab">TabA</a>
+        </li>
+        <li role="presentation">
+          <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">TabB</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <div class="tree_flex">
+            <div class="left_tree_btns">
+              <button class="btn btn-info btn-sm">新增</button>
+              <button class="btn btn-info btn-sm">刷树</button>
+              <button class="btn btn-info btn-sm">刷标</button>
+              <button class="btn btn-info btn-sm">分组</button>
+              <button class="btn btn-info btn-sm">保存</button>
+            </div>
+            <div class="tree_wrap">
+              <ul id="treeDemo" class="ztree" style="margin-bottom: 5px;"></ul>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+          <div class="left_tree_btns">
+            <button class="btn btn-info btn-sm">新增</button>
+            <button class="btn btn-info btn-sm">刷树</button>
+            <button class="btn btn-info btn-sm">刷标</button>
+            <button class="btn btn-info btn-sm">分组</button>
+            <button class="btn btn-info btn-sm">保存</button>
+          </div>
+          <div class="tree_wrap">
+            <ul id="treeDemo1" class="ztree"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="left_menu2" class="easyui-window" style="width:280px;height: 240px;min-width: 280px;" closed="true" data-options="onClose:function(){return false}">
+      <ul id="treeDemo2" class="ztree"></ul>
+    </div>
+    <div id="left_menu_ch" class="easyui-window" style="width:280px;height: 300px;" closed="true" data-options="onClose:function(){return false}">
+      <div class="form-group" style="margin: 5px 0;overflow: hidden;">
+        <button class="btn btn-info btn-sm" style="width: 80px;float: left;margin:10px;">按钮</button>
+        <button class="btn btn-info btn-sm" style="width: 80px;float: left;margin:10px;">按钮</button>
+        <button class="btn btn-info btn-sm" style="width: 80px;float: left;margin:10px;">按钮</button>
+        <button class="btn btn-info btn-sm" style="width: 80px;float: left;margin:10px;">按钮</button>
+        <button class="btn btn-info btn-sm" style="width: 80px;float: left;margin:10px;">按钮</button>
+        <button class="btn btn-info btn-sm" style="width: 80px;float: left;margin:10px;">按钮</button>
+      </div>
+      <img src="<%require('images/index/sub_images/tanchukuang.png')%>" style="width: 100%;" id="left_menu_ch_img" />
+      <div style="width: 100%;border-top: 1px solid #ccc;margin-top: 5px;padding: 10px;">
+        <div style="width: 280px;margin: 0 auto;">
+          <button class="btn btn-info btn-sm" style="width: 120px;height: 40px;line-height: 30px;font-size: 15px;">确定</button>
+          <button class="btn btn-sm" style="width: 120px;height: 40px;line-height: 30px;font-size: 15px;background: #abb8be;margin-left: 30px;color: #fff;">取消</button>
+        </div>
+
+      </div>
+    </div>
+    <div id="right_menu" class="easyui-window nonono" closed="true" style="min-width: 280px;">
+      <div class="right_menu_th">
+        <span class="menu_th">属性</span>
+        <span class="menu_th">数值</span>
+      </div>
+      <div class="oList" id="oList_list">
+        <div class="right_menu_lists ">
+          <div class="right_menu_list">
+            <div class="list_title">分类标题</div>
+            <div class="list_table ">
+              <table>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="right_menu_lists">
+          <div class="right_menu_list">
+            <div class="list_title">分类标题</div>
+            <div class="list_table">
+              <table>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="right_menu_lists">
+          <div class="right_menu_list">
+            <div class="list_title">分类标题</div>
+            <div class="list_table">
+              <table>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="right_menu_lists">
+          <div class="right_menu_list">
+            <div class="list_title">分类标题</div>
+            <div class="list_table">
+              <table>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="right_menu_lists">
+          <div class="right_menu_list">
+            <div class="list_title">分类标题</div>
+            <div class="list_table">
+              <table>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <font color="#01b0dc">&bull;&nbsp;&nbsp;&nbsp;&nbsp;</font>参数名称</td>
+                  <td>000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width:120px;margin: 10px auto;margin-bottom: 5px;">
+        <button type="button" class="btn btn-primary aBtn">保存</button>
+      </div>
+
+      <div class="right_menu_btn" onclick="openDetail()"></div>
+    </div>
+    <div class="index_right_menu_detail" id="index_right_menu_detail">
+      <div class="left_tree_title" id="left_tree_title" style="cursor: move;">
+        属性
+        <span id="closerightMenuDetail" class="glyphicon glyphicon-minus-sign" aria-hidden="true" style="float:right;margin:6px 6px 0 0;color:#01b0dc;font-size:20px;cursor: pointer;"
+          onclick="closeDetail()"></span>
+      </div>
+      <div class="detail_content" style="">
+        <div class="detail_content_left">
+          <div class="content_btn btn_selected">类别标签</div>
+          <div class="content_btn">类别标签</div>
+          <div class="content_btn">类别标签</div>
+          <div class="content_btn">类别标签</div>
+          <div class="content_btn">类别标签</div>
+          <div class="content_btn">类别标签</div>
+          <div class="content_btn">类别标签</div>
+          <div class="content_btn">类别标签</div>
+          <div class="content_btn">类别标签</div>
+          <div class="content_btn">类别标签</div>
+        </div>
+        <div class="detail_content_right" style="overflow: hidden;">
+          <textarea id="post_body" name="body" class="textarea">青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html青烟要是没有风，就会一直往上飘，故事要是没人写，就不会有人看。深居在监狱里的犯人，即使被磨平了棱角，铮铮逆骨还是埋在糜烂的肉体里，改喝喝红酒的酒鬼，不论怎么伪装潇洒还是学不会优雅。那些难以描述的内心辗转，似乎若即若离，在越来越沉重的躯干里，摇摆不定。文人墨客挥洒的诗篇，是精神粮食的谷仓，读一本书，双手合十，怀一颗拙劣而雀跃的心，在灼热的鲜血里跳动，蓬勃的喷发出对世界深深的爱恋－啊，多么多么的刺痛那被一句话一个字贯穿心灵的触电般的爆炸般的中毒般的，感动愤怒悔恨喜悦，是那么真实，真实到切身体会生命的存在，惋惜于死去的事物是多么愚蠢！当尘埃落定，一切一切回归故里，没变的是拙笨的头脑，改变的是被进化的灵魂。（美文网：www.meiwenting.com）内容来源：美文亭（www.meiwenting.com）原文网址：http://www.meiwenting.com/a/201712/126574.html</textarea>
+        </div>
+
+      </div>
+      <div class="oBax">
+        <button class="oBtn">保存</button>
+      </div>
+      <div class="right_menu_detail_btn" onclick="closeDetail()"></div>
+    </div>
+
+    <div class="cl_menus" id="box" style="width: 645px;background: #24657c;padding-left: 2px;z-index: 9100;" isselected="0">
+      <a id="icon_26" href="javascript:void(0)" class="cl_menus26" data-img="26" isselected="0" title="打开文件" style="position: relative;"></a>
+      <a id="icon_27" href="javascript:void(0)" class="cl_menus27" data-img="27" isselected="0" title="打开配准影响"></a>
+      <a id="icon_1" href="javascript:void(0)" class="cl_menus1" data-img="1" isselected="0" title="点位" style="position: relative;"></a>
+      <a id="icon_2" href="javascript:void(0)" class="cl_menus2" data-img="2" isselected="0" title="距离"></a>
+      <a id="icon_3" href="javascript:void(0)" class="cl_menus3" data-img="3" isselected="0" title="长度"></a>
+      <a id="icon_4" href="javascript:void(0)" class="cl_menus4" data-img="4" isselected="0" title="宽度"></a>
+      <a id="icon_5" href="javascript:void(0)" class="cl_menus5" data-img="5" isselected="0" title="半径"></a>
+      <a id="icon_6" href="javascript:void(0)" class="cl_menus6" data-img="6" isselected="0" title="方向角"></a>
+      <a id="icon_7" href="javascript:void(0)" class="cl_menus7" data-img="7" isselected="0" title="矩形"></a>
+      <a id="icon_8" href="javascript:void(0)" class="cl_menus8" data-img="8" isselected="0" title="斜矩形"></a>
+      <a id="icon_9" href="javascript:void(0)" class="cl_menus9" data-img="9" isselected="0" title="圆"></a>
+      <a id="icon_10" href="javascript:void(0)" class="cl_menus10" data-img="10" isselected="0" title="多边形"></a>
+      <a id="icon_11" href="javascript:void(0)" class="cl_menus11" data-img="11" isselected="0" title="材质"></a>
+      <a id="icon_12" href="javascript:void(0)" class="cl_menus12" data-img="12" isselected="0" title="删除单个"></a>
+      <a id="icon_13" href="javascript:void(0)" class="cl_menus13" data-img="13" isselected="0" title="删除全部"></a>
+      <a id="icon_28" href="javascript:void(0)" class="cl_menus28" data-img="28" isselected="0" style="border:0;" title="删除图层"></a>
+    </div>
+
+  </div>
+<!-- 主页 end -->
+</div>

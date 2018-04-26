@@ -1,0 +1,135 @@
+    <div class="menus_wrap">
+      <div class="btn-group">
+        <div class="btn-group">
+          <select name="country" class="fastbannerform__country">
+            <option value="ASA" title="AA">美国</option>
+            <option value="CHN" title="CN" selected="selected">中国</option>
+            <option value="ZWE" title="ZW">津巴布韦</option>
+          </select>
+        </div>
+        <div class="btn-group">
+          <button id="mubiao" class="btn btn-default" isopen="0" data-toggle="tab" type="button" style="padding-left: 25px;padding-right:25px;">
+            <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>&nbsp;目标</button>
+        </div>
+        <button id="celiang" class="btn btn-default" isopen="0" type="button" style="padding-left: 25px;padding-right:25px;">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;量测</button>
+        <button id="searchBtn" class="btn btn-default" isopen="0" type="button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;综合查询</button>
+        <div class="btn-group">
+          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" style="padding-left: 25px;padding-right:25px;">
+            <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+            <span id="view_text">二维</span>&nbsp;&nbsp;
+            <span class="caret"></span>
+          </button>
+          <ul id="view_option" class="dropdown-menu">
+            <li>
+              <a href="##">二维</a>
+            </li>
+            <li>
+              <a href="##">三维</a>
+            </li>
+            <li>
+              <a href="##">制图</a>
+            </li>
+            <li>
+              <a href="##" onclick="openFullScreen('peizhun')">配准</a>
+            </li>
+            <li>
+              <a href="##" onclick="openFullScreen('shibie')">识别</a>
+            </li>
+            <li>
+              <a href="##" onclick="openFullScreen('database')">数据管理</a>
+            </li>
+            <li>
+              <a href="##" onclick="openFullScreen('txcl')">图像处理</a>
+            </li>
+            <li>
+              <div style="position: relative;overflow: hidden;" id="ziduan">
+                <a id="ziduan_a" href="##">字段管理</a>
+                <ul id="oList" style="box-shadow: 1px 1px 2px #888888;">
+                  <li>
+                    <a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+                  </li>
+                  <li>
+                    <a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+                  </li>
+                  <li>
+                    <a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+                  </li>
+                  <li>
+                    <a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+                  </li>
+                  <li>
+                    <a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+                  </li>
+                  <li>
+                    <a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="search_window" class="search_window nonono" style="width:1000px ;height: 500px;">
+        <div class="inps">
+          <form role="form" id="defaultForm">
+            <table id="inps_table">
+              <tr>
+                <td width="80" class="table_title">日期</td>
+                <td><input type="date" /></td>
+                <td class="table_title">日期</td>
+                <td><input type="date" /></td>
+                <td class="table_title">日期</td>
+                <td><input type="date" /></td>
+                <td class="table_title">日期</td>
+                <td><input type="date" /></td>
+              </tr>
+              <tr>
+                <td width="80" class="table_title">数值</td>
+                <td><input type="number" /></td>
+                <td class="table_title">数值</td>
+                <td><input type="number" /></td>
+                <td class="table_title">数值</td>
+                <td><input type="number" /></td>
+                <td class="table_title">数值</td>
+                <td><input type="number" /></td>
+              </tr>
+              <tr>
+                <td width="80" class="table_title">选项</td>
+                <td>
+                  <select></select>
+                </td>
+                <td class="table_title">选项</td>
+                <td>
+                  <select></select>
+                </td>
+                <td class="table_title">选项</td>
+                <td>
+                  <select></select>
+                </td>
+                <td class="table_title">选项</td>
+                <td>
+                  <select></select>
+                </td>
+              </tr>
+              <tr>
+                <td width="80" class="table_title">文本</td>
+                <td><input type="text" /></td>
+                <td class="table_title">文本</td>
+                <td><input type="text" /></td>
+                <td class="table_title">文本</td>
+                <td><input type="text" /></td>
+                <td class="table_title">文本</td>
+                <td><input type="text" /></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div style="height:80px;line-height:80px;text-align:center;border-top:1px solid #ccc;">
+          <button class="btn btn-info" style="width:100px;">查询</button>
+          <button class="btn btn-default" style="width:100px;margin-left:30px;">重置</button>
+        </div>
+      </div>
+    </div>
