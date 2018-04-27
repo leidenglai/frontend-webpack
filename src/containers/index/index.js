@@ -199,6 +199,11 @@ class IndexClass extends Main {
   bindEvent() {
     const that = this
 
+    // test storage
+    this.appViewDom.find('.storeage-btn').on('click', function() {
+      localStorage.setItem('TestData', JSON.stringify({aa: 'bb'}))
+    })
+
     this.appViewDom.find('.tree_btn').on('click', function() {
       var isopen = $(this).attr('isopen')
       if (isopen === '0') {

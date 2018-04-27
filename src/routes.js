@@ -20,6 +20,18 @@ const routesMap = {
       const template = require('tpl/login/index.tpl.html')
       cb(Controller, template)
     })
+  },
+
+  // 识别
+  '/shibie': cb => {
+    require.ensure([], require => {
+      // 加载控制器
+      const Controller = require('containers/shibie/index').default
+
+      // 加载模板
+      const template = require('tpl/shibie/index.tpl.html')
+      cb(Controller, template)
+    })
   }
 }
 
