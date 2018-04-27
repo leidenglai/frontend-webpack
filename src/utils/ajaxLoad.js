@@ -35,7 +35,7 @@ export default function requestData(api, data = {}, options = {}) {
       crossDomain: true,
       success: res => {
         //返回后端数据、 请求时的参数
-        resolve({data: res, params: params})
+        resolve(res)
       },
       error: (xhr, textStatus) => {
         if (textStatus == 'parsererror') {
