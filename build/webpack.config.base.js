@@ -6,7 +6,7 @@ var path = require('path'),
   autoprefixer = require('autoprefixer')
 
 // 静态资源目录
-const CDN_PATH = './static/'
+const CDN_PATH = '/static/'
 
 var rootPath = path.resolve(__dirname, '..'), // 项目根目录
   src = path.join(rootPath, 'src'), // 开发源码目录
