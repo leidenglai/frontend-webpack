@@ -1,0 +1,25 @@
+
+  <div class="left_user">
+    <div class="btn-group top_user">
+      <button class="btn btn-default dropdown-toggle yes" data-toggle="dropdown" type="button" style="padding-left: 25px;padding-right:25px;">
+        <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+        <span id="view_text">主界面</span>&nbsp;&nbsp;
+        <span class="caret"></span>
+      </button>
+      <ul id="view_option" class="dropdown-menu">
+        <li>
+          <a href="/index" push-state>主界面</a>
+        </li>
+        </li>
+        <li>
+          <a href="/dataManager" push-state>数据管理</a>
+        </li>
+        <li>
+          <a href="/imageProces" push-state>图像处理</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="right_user">
+    <img src="<%= require('images/index/user_icon_default.png') %>" />
+  </div>

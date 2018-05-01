@@ -1,77 +1,7 @@
 <div class="pageContainer" id="indexContent">
   <!-- 主页 -->
-   <a href="/login?test=1" push-state>无刷新跳转方式</a>
-   <button class="storeage-btn">TestStorage</button>
   <div class="index_main" id="index_main">
-    <div class="user_menu">
-      <div class="btn-group">
-        <div class="btn-group">
-          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" style="background:none;height:50px;width:50px;border-radius: 50px;"></button>
-          <ul id="" class="dropdown-menu" style="left:-60px !important;min-width:100px !important;z-index: 9999;">
-            <li>
-              <a href="##">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;切换用户</a>
-            </li>
-            <li>
-              <a href="##">
-                <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;修改密码</a>
-            </li>
-            <li>
-              <a href="##">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;用户设置</a>
-            </li>
-            <li>
-              <a href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;退出登录</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="index_tree_btns">
-      <div class="index_tree_btn tree_btn" isopen="0"></div>
-      <div class="index_tree_btn attr_btn" isopen="0"></div>
-    </div>
-    <div id="left_menu" class="easyui-window" style="width:280px;min-width: 280px;" closed="true" data-options="onClose:function(){return false}">
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active">
-          <a href="#home" aria-controls="home" role="tab" data-toggle="tab">TabA</a>
-        </li>
-        <li role="presentation">
-          <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">TabB</a>
-        </li>
-      </ul>
-
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="home">
-          <div class="tree_flex">
-            <div class="left_tree_btns">
-              <button class="btn btn-info btn-sm">新增</button>
-              <button class="btn btn-info btn-sm">刷树</button>
-              <button class="btn btn-info btn-sm">刷标</button>
-              <button class="btn btn-info btn-sm">分组</button>
-              <button class="btn btn-info btn-sm">保存</button>
-            </div>
-            <div class="tree_wrap">
-              <ul id="treeDemo" class="ztree" style="margin-bottom: 5px;"></ul>
-            </div>
-          </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="profile">
-          <div class="left_tree_btns">
-            <button class="btn btn-info btn-sm">新增</button>
-            <button class="btn btn-info btn-sm">刷树</button>
-            <button class="btn btn-info btn-sm">刷标</button>
-            <button class="btn btn-info btn-sm">分组</button>
-            <button class="btn btn-info btn-sm">保存</button>
-          </div>
-          <div class="tree_wrap">
-            <ul id="treeDemo1" class="ztree"></ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="indexTopMenu" class="index_top_menu"></div>
     <div id="left_menu2" class="easyui-window" style="width:280px;height: 240px;min-width: 280px;" closed="true" data-options="onClose:function(){return false}">
       <ul id="treeDemo2" class="ztree"></ul>
     </div>
@@ -279,25 +209,6 @@
         <button class="oBtn">保存</button>
       </div>
       <div class="right_menu_detail_btn" onclick="closeDetail()"></div>
-    </div>
-
-    <div class="cl_menus" id="box" style="width: 645px;background: #24657c;padding-left: 2px;z-index: 9100;" isselected="0">
-      <a id="icon_26" href="javascript:void(0)" class="cl_menus26" data-img="26" isselected="0" title="打开文件" style="position: relative;"></a>
-      <a id="icon_27" href="javascript:void(0)" class="cl_menus27" data-img="27" isselected="0" title="打开配准影响"></a>
-      <a id="icon_1" href="javascript:void(0)" class="cl_menus1" data-img="1" isselected="0" title="点位" style="position: relative;"></a>
-      <a id="icon_2" href="javascript:void(0)" class="cl_menus2" data-img="2" isselected="0" title="距离"></a>
-      <a id="icon_3" href="javascript:void(0)" class="cl_menus3" data-img="3" isselected="0" title="长度"></a>
-      <a id="icon_4" href="javascript:void(0)" class="cl_menus4" data-img="4" isselected="0" title="宽度"></a>
-      <a id="icon_5" href="javascript:void(0)" class="cl_menus5" data-img="5" isselected="0" title="半径"></a>
-      <a id="icon_6" href="javascript:void(0)" class="cl_menus6" data-img="6" isselected="0" title="方向角"></a>
-      <a id="icon_7" href="javascript:void(0)" class="cl_menus7" data-img="7" isselected="0" title="矩形"></a>
-      <a id="icon_8" href="javascript:void(0)" class="cl_menus8" data-img="8" isselected="0" title="斜矩形"></a>
-      <a id="icon_9" href="javascript:void(0)" class="cl_menus9" data-img="9" isselected="0" title="圆"></a>
-      <a id="icon_10" href="javascript:void(0)" class="cl_menus10" data-img="10" isselected="0" title="多边形"></a>
-      <a id="icon_11" href="javascript:void(0)" class="cl_menus11" data-img="11" isselected="0" title="材质"></a>
-      <a id="icon_12" href="javascript:void(0)" class="cl_menus12" data-img="12" isselected="0" title="删除单个"></a>
-      <a id="icon_13" href="javascript:void(0)" class="cl_menus13" data-img="13" isselected="0" title="删除全部"></a>
-      <a id="icon_28" href="javascript:void(0)" class="cl_menus28" data-img="28" isselected="0" style="border:0;" title="删除图层"></a>
     </div>
 
   </div>

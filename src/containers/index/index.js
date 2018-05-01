@@ -4,15 +4,14 @@
 // 加载此模块的CSS
 import 'bootstrap-fileinput/css/fileinput'
 import 'bootstrap-fileinput/css/fileinput'
-import 'libs/ztree3/css/awesomeStyle/awesome'
-import 'css/index.css'
+import 'css/index'
 import 'libs/jquery.qeditor/jquery.qeditor.css'
 
 import 'libs/jquery-easyui/plugins/jquery.datagrid'
-import 'libs/ztree3/js/jquery.ztree.all.js'
 import 'libs/jquery.qeditor/jquery.qeditor.js'
 
-import 'css/components/leftMenu.less'
+// 顶部导航
+import TopMenu from 'components/index/topMenu'
 
 import Main from 'containers/main'
 
@@ -37,14 +36,14 @@ class IndexClass extends Main {
     this.oHeight = $(window).height()
     this._w = $(window).width()
     this._h = $(window).height()
-    this.h1 = $('#left_menu').height() // left_menu height
 
     this.init()
-    this.initLeftMenu()
-    this.ztreeInit()
 
     // 绑定事件 统一放在此方法内
     this.bindEvent()
+
+    // 加载顶部导航
+    new TopMenu()
   }
 
   init() {
@@ -63,9 +62,6 @@ class IndexClass extends Main {
         .css({
           top: that.oHeight - 240 + 'px'
         })
-      $('#left_menu').css({
-        height: that.oHeight - 370 + 'px'
-      })
       $('#treeDemo1').css({
         height: that.oHeight - 530 + 'px',
         overflow: 'auto'
@@ -74,7 +70,6 @@ class IndexClass extends Main {
 
     $(window).resize(function() {
       that._w = $(window).width()
-      that.h1 = $('#left_menu').height()
     })
 
     var wid = $(window).width()
@@ -203,174 +198,6 @@ class IndexClass extends Main {
     this.appViewDom.find('.storeage-btn').on('click', function() {
       localStorage.setItem('TestData', JSON.stringify({aa: 'bb'}))
     })
-
-    this.appViewDom.find('.tree_btn').on('click', function() {
-      var isopen = $(this).attr('isopen')
-      if (isopen === '0') {
-        $('#left_menu').window('open')
-        $(this).css('background-color', '#FF8F08')
-        $(this).attr('isopen', '1')
-      }
-      if (isopen === '1') {
-        $('#left_menu').window('close')
-        $(this).css('background-color', '#01b0dc')
-        $(this).attr('isopen', '0')
-      }
-    })
-  }
-
-  initLeftMenu() {
-    $('#left_menu').css({
-      height: this.oHeight - 370 + 'px'
-    })
-
-    $('#left_menu').window({
-      title: 'XX树',
-      inline: true,
-      left: 90,
-      top: 80,
-      minimizable: false,
-      maximizable: false,
-      collapsible: false,
-      shadow: true,
-      modal: false,
-      onClose: function() {
-        $('.tree_btn').css('background-color', '#01b0dc')
-        $('.tree_btn').attr('isopen', '0')
-      }
-    })
-  }
-
-  ztreeInit() {
-    this.builePlanTree()
-  }
-
-  builePlanTree() {
-    var setting1 = {
-      view: {
-        showIcon: true //设置 zTree 是否显示节点的图标。
-      },
-      data: {
-        simpleData: {
-          enable: true
-        }
-      },
-      callback: {
-        onClick: function() {
-          //					if () {
-          //
-          //					} else{
-          //
-          //					}
-          $('#right_menu').window('open')
-          closeDetail()
-        }
-      }
-    }
-    var zNodes = [
-      {
-        id: 1,
-        pId: 0,
-        name: '课程目录',
-        open: true
-      },
-      {
-        id: 11,
-        pId: 1,
-        name: '季度产品知识课程',
-        open: true
-      },
-      {
-        id: 111,
-        pId: 11,
-        name: '13Q4产品知识'
-      },
-      {
-        id: 112,
-        pId: 11,
-        name: '14Q1产品知识'
-      },
-      {
-        id: 113,
-        pId: 11,
-        name: '14Q2产品知识'
-      },
-      {
-        id: 114,
-        pId: 11,
-        name: '14Q3产品知识'
-      },
-      {
-        id: 115,
-        pId: 11,
-        name: '14Q4产品知识'
-      },
-      {
-        id: 12,
-        pId: 1,
-        name: '项目宣讲类课程',
-        open: true
-      },
-      {
-        id: 121,
-        pId: 12,
-        name: '项目宣讲类课程1'
-      },
-      {
-        id: 122,
-        pId: 12,
-        name: '项目宣讲类课程2'
-      },
-      {
-        id: 123,
-        pId: 12,
-        name: '项目宣讲类课程3'
-      },
-      {
-        id: 13,
-        pId: 1,
-        name: '移动商学院',
-        open: true
-      },
-      {
-        id: 131,
-        pId: 13,
-        name: '技能类'
-      },
-      {
-        id: 132,
-        pId: 13,
-        name: '心态类'
-      },
-      {
-        id: 132,
-        pId: 13,
-        name: '知识类'
-      },
-      {
-        id: 14,
-        pId: 1,
-        name: '移动商学院',
-        open: true
-      },
-      {
-        id: 141,
-        pId: 14,
-        name: '技能类'
-      },
-      {
-        id: 142,
-        pId: 14,
-        name: '心态类'
-      },
-      {
-        id: 142,
-        pId: 14,
-        name: '知识类'
-      }
-    ]
-
-    $.fn.zTree.init($('#treeDemo'), setting1, zNodes)
   }
 
   ziduanControl() {

@@ -5,14 +5,16 @@
     height: 100%;
     top: 0 !important;
     left: 0;
-    background: #3a484d url(../images/index/index.png) center center no-repeat;
+    background: #3a484d url(../../images/index/index.png) center center no-repeat;
 }
 
-body,
-html {
-    height: 100%;
-    background: #3a484d;
-    position: relative;
+.index_top_menu {
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 9999;
 }
 
 .map {
@@ -22,40 +24,6 @@ html {
     top: 0;
     left: 0;
     display: none;
-}
-
-.index_tree_btns {
-    height: 120px;
-    width: 50px;
-    position: fixed;
-    left: 30px;
-    bottom: 30px;
-    background: none;
-    z-index: 9002;
-}
-
-.index_tree_btns .index_tree_btn {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-}
-
-.tree_btn {
-    top: 0;
-    left: 0;
-    background-color: #01b0dc;
-    background-image: url('../images/index/icon_tree.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.attr_btn {
-    bottom: 0;
-    left: 0;
-    background-color: #01b0dc;
-    background-image: url('../images/index/icon_attribute.png');
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 
 .index_left_tree {
@@ -142,7 +110,7 @@ html {
 }
 
 .list_title {
-    background: url(../images/index/title_icon.png) 10px center no-repeat;
+    background: url(../../images/index/title_icon.png) 10px center no-repeat;
     height: 30px;
     line-height: 30px;
     padding-left: 26px;
@@ -166,151 +134,8 @@ html {
     line-height: 25px;
 }
 
-.cl_menus {
-    height: 40px;
-    position: fixed;
-    right: 100px;
-    top: -60px;
-    background: #fff;
-    border-radius: 5px;
-}
-
-.cl_menus a {
-    display: block;
-    height: 30px;
-    border-right: 1px solid #154f64;
-    width: 40px;
-    float: left;
-    z-index: 2;
-    background-color: #24657c;
-    margin: 5px 0;
-}
-
-.cl_menus1 {
-    background: url('../images/index/tubiao/index_icon01.png') center center no-repeat;
-}
-
-.cl_menus2 {
-    background: url('../images/index/tubiao/index_icon02.png') center center no-repeat;
-}
-
-.cl_menus3 {
-    background: url('../images/index/tubiao/index_icon03.png') center center no-repeat;
-}
-
-.cl_menus4 {
-    background: url('../images/index/tubiao/index_icon04.png') center center no-repeat;
-}
-
-.cl_menus5 {
-    background: url('../images/index/tubiao/index_icon05.png') center center no-repeat;
-}
-
-.cl_menus6 {
-    background: url('../images/index/tubiao/index_icon06.png') center center no-repeat;
-}
-
-.cl_menus7 {
-    background: url('../images/index/tubiao/index_icon07.png') center center no-repeat;
-}
-
-.cl_menus8 {
-    background: url('../images/index/tubiao/index_icon08.png') center center no-repeat;
-}
-
-.cl_menus9 {
-    background: url('../images/index/tubiao/index_icon09.png') center center no-repeat;
-}
-
-.cl_menus10 {
-    background: url('../images/index/tubiao/index_icon10.png') center center no-repeat;
-}
-
-.cl_menus11 {
-    background: url('../images/index/tubiao/index_icon11.png') center center no-repeat;
-}
-
-.cl_menus12 {
-    background: url('../images/index/tubiao/index_icon12.png') center center no-repeat;
-}
-
-.cl_menus13 {
-    background: url('../images/index/tubiao/index_icon13.png') center center no-repeat;
-}
-
-.cl_menus14 {
-    background: url('../images/index/14.png') center center no-repeat;
-}
-
-.cl_menus15 {
-    background: url('../images/index/tubiao/peizhun_icon01.png') center center no-repeat;
-}
-
-.cl_menus16 {
-    background: url('../images/index/tubiao/peizhun_icon02.png') center center no-repeat;
-}
-
-.cl_menus17 {
-    background: url('../images/index/tubiao/peizhun_icon03.png') center center no-repeat;
-}
-
-.cl_menus18 {
-    background: url('../images/index/tubiao/peizhun_icon04.png') center center no-repeat;
-}
-
-.cl_menus19 {
-    background: url('../images/index/tubiao/peizhun_icon05.png') center center no-repeat;
-}
-
-.cl_menus20 {
-    background: url('../images/index/tubiao/peizhun_icon06.png') center center no-repeat;
-}
-
-.cl_menus21 {
-    background: url('../images/index/tubiao/peizhun_icon07.png') center center no-repeat;
-}
-
-.cl_menus22 {
-    background: url('../images/index/tubiao/peizhun_icon08.png') center center no-repeat;
-}
-
-.cl_menus23 {
-    background: url('../images/index/tubiao/peizhun_icon09.png') center center no-repeat;
-}
-
-.cl_menus24 {
-    background: url('../images/index/tubiao/peizhun_icon10.png') center center no-repeat;
-}
-
-.cl_menus25 {
-    background: url('../images/index/tubiao/peizhun_icon11.png') center center no-repeat;
-}
-
-.cl_menus26 {
-    background: url('../images/index/打开文件.png') center center no-repeat;
-}
-
-.cl_menus27 {
-    background: url('../images/index/打开配准影响.png') center center no-repeat;
-}
-
-.cl_menus28 {
-    background: url('../images/index/删除图层.png') center center no-repeat;
-}
-
 #icon_14 {
     width: 80px;
-}
-
-.user_menu {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    border-radius: 50px;
-    color: #444;
-    background: url('../images/index/tx1.jpg') center center no-repeat;
 }
 
 .czfx_window {
@@ -327,7 +152,7 @@ html {
     top: 50%;
     height: 50px;
     width: 8px;
-    background: #00bae8 url(../images/index/right_menu_btn.png) center center no-repeat;
+    background: #00bae8 url(../../images/index/right_menu_btn.png) center center no-repeat;
     left: -8px;
     margin-top: -25px;
     border-radius: 3px 0 0 3px;
@@ -399,7 +224,7 @@ html {
     top: 50%;
     height: 50px;
     width: 8px;
-    background: #00bae8 url(../images/index/right_menu_detail_btn.png) center center no-repeat;
+    background: #00bae8 url(../../images/index/right_menu_detail_btn.png) center center no-repeat;
     left: -8px;
     border-radius: 3px 0 0 3px;
 }
@@ -642,15 +467,15 @@ html {
 }
 
 .icon-add {
-    background: url(../images/index/add_icon_default.png) no-repeat;
+    background: url(../../images/index/add_icon_default.png) no-repeat;
 }
 
 .icon-cut {
-    background: url(../images/index/edit_icon_default.png) no-repeat;
+    background: url(../../images/index/edit_icon_default.png) no-repeat;
 }
 
 .icon-save {
-    background: url(../images/index/delete_icon_default.png) no-repeat;
+    background: url(../../images/index/delete_icon_default.png) no-repeat;
 }
 
 #tb a {

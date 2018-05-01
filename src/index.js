@@ -34,13 +34,17 @@ import asynOnpopstate from 'utils/asynOnpopstate' // 兼容popstate
 
 import aEventH5handler from 'utils/aEventH5handler' // 链接跳转处理
 
-import MainMenus from 'components/mainMenus' // 主菜单
+import UserMenu from 'components/userMenu' // 人头像菜单
+import TopMenu from 'components/topMenu' // 非主页面的顶部导航
 
 // 主容器 用于各个模块控制视图变化
 window.appView = $('#container')
 
 // 将主菜单的操作方法暴露到全局
-window.mainMenusControl = new MainMenus()
+window.userMenuControl = new UserMenu()
+
+// 将顶部导航操作方法暴露到全局
+window.topMenuControl = new TopMenu()
 
 // ================================= //
 // 路由处理
@@ -117,7 +121,8 @@ window.RouterController = new Router(routes).configure({
     const route = RouterController.getRoute()
 
     // 路由变化处理 处理主菜单显隐
-    window.mainMenusControl.listenRoute(route)
+    window.userMenuControl.listenRoute(route)
+    window.topMenuControl.listenRoute(route)
   },
   notfound: () => {
     asynOnpopstate(() => {
