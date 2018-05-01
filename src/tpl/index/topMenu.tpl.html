@@ -1,0 +1,82 @@
+
+			<div class="menus_wrap" style="z-index: 9999;position: fixed;">
+				<div class="btn-group">
+					<div class="btn-group">
+						<button id="indextree" class="btn btn-default" isopen="0" data-toggle="tab" type="button" style="padding-left: 25px;padding-right:25px;"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>&nbsp;树</button>
+					</div>
+					<div class="btn-group">
+						<button id="mubiao" class="btn btn-default" isopen="0" data-toggle="tab" type="button" style="padding-left: 25px;padding-right:25px;"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>&nbsp;目标</button>
+					</div>
+					<button id="celiang" class="btn btn-default" isopen="0" type="button" style="padding-left: 25px;padding-right:25px;"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;量测</button>
+					<button id="searchBtn" class="btn btn-default" isopen="0" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;综合查询</button>
+					<div class="btn-group">
+						<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" style="padding-left: 25px;padding-right:25px;">
+				  	<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+				  	<span id="view_text">二维</span>&nbsp;&nbsp;
+				  	<span class="caret"></span>
+				  </button>
+						<ul id="view_option" class="dropdown-menu">
+							<li>
+								<a href="##">二维</a>
+							</li>
+							<li>
+								<a href="##">三维</a>
+							</li>
+							<li>
+								<a href="##">制图</a>
+							</li>
+							<li>
+								<a href="##" onclick="openFullScreen('peizhun')">配准</a>
+							</li>
+							<li>
+								<a href="##" onclick="openFullScreen('shibie')">识别</a>
+							</li>
+							<li>
+								<a href="##" onclick="openFullScreen('database')">数据管理</a>
+							</li>
+							<li>
+								<a href="##" onclick="openFullScreen('txcl')">图像处理</a>
+							</li>
+							<li>
+								<div style="position: relative;overflow: hidden;" id="ziduan">
+									<a id="ziduan_a" href="##">字段管理</a>
+									<ul id="oList" style="box-shadow: 1px 1px 2px #888888;">
+										<li>
+											<a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+										</li>
+										<li>
+											<a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+										</li>
+										<li>
+											<a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+										</li>
+										<li>
+											<a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+										</li>
+										<li>
+											<a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+										</li>
+										<li>
+											<a onclick="openFullScreen('ziduanguanli')" href="##">页面名称</a>
+										</li>
+									</ul>
+								</div>
+								<script type="text/javascript">
+									var ziduan = document.getElementById("ziduan");
+									var z_a = document.getElementById("ziduan_a")
+									ziduan.onmouseover = function() {
+										var over = ziduan.style.overflow;
+										ziduan.style.overflow = "visible";
+										z_a.style.color = "#fff"
+									}
+									ziduan.onmouseleave = function() {
+										var over = ziduan.style.overflow;
+										ziduan.style.overflow = "hidden";
+										z_a.style.color = "#000"
+									}
+								</script>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
