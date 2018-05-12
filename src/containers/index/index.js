@@ -53,7 +53,7 @@ class IndexClass extends Main {
       height: that.oHeight - 530 + 'px',
       overflow: 'auto'
     })
-    $(window).resize(function() {
+    $(document).resize(function() {
       $('.window-shadow').hide()
 
       that.oHeight = $(window).height()
@@ -68,7 +68,7 @@ class IndexClass extends Main {
       })
     })
 
-    $(window).resize(function() {
+    $(document).resize(function() {
       that._w = $(window).width()
     })
 
@@ -81,7 +81,7 @@ class IndexClass extends Main {
     $('#left_menu_ch_img').css({
       height: oHeight - 280 + 'px'
     })
-    $(window).resize(function() {
+    $(document).resize(function() {
       wid = $(window).width()
       wid1 = wid - 705
       $('#left_menu_ch').css({
@@ -113,7 +113,7 @@ class IndexClass extends Main {
     $('#oList_list').css({
       height: oHeight - 280 + 'px'
     })
-    $(window).resize(function() {
+    $(document).resize(function() {
       oHeight = $(window).height()
       oWidth2 = $(window).width()
       $('#right_menu').css({
