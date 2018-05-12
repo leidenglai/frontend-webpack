@@ -59,7 +59,7 @@ config.plugins.push(
       port: 3000,
       proxy: 'http://127.0.0.1:3000',
       logConnections: false,
-      browser: 'google chrome'
+      browser: 'chrome'
     },
     {
       reload: false

@@ -82,7 +82,7 @@ module.exports = {
           loader: 'exports-loader?window.$!exports-loader?window.jQuery!script-loader'
         },
         {
-          test: /\.html$/,
+          test: /\.tpl\.html$/,
           use: [
             {
               loader: 'underscore-template-loader',
